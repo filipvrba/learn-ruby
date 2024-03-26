@@ -1,3 +1,7 @@
+import "../css/bootstrap.min.css";
 import "../css/style.css";
+import routesObj from "../json/routes.json";
 import "./core";
-document.querySelector("#app").innerHTML = "<h1>Hello RubyJS</h1>"
+import "./elements";
+window.ROUTES_JSON = routesObj;
+document.querySelector("#app").innerHTML = "<elm-priority-routes></elm-priority-routes>"
