@@ -6,8 +6,8 @@
       "priority": 0
     },
     {
-      "title": "Kategorie",
-      "endpoint": "kategorie",
+      "title": "Obsah",
+      "endpoint": "obsah",
       "priority": 10
     },
     {
