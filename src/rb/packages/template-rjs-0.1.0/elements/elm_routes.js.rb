@@ -38,13 +38,13 @@ export default class ElmRoutes < HTMLElement
     
     file_name = page.endpoint.gsub('-', '_')
     Net.curl("./html/#{file_name}.html") do |content|
-      init_elm(content)
+      init_elm(content, page)
     end
   end
 
-  def init_elm(content)
+  def init_elm(content, page = nil)
     template = """
-    #{content}
+    #{content.sub('TITLE', page.title) if page}
     """
 
     self.innerHTML = template

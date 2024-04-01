@@ -5,11 +5,6 @@ export default class ElmPriorityRoutes extends ElmRoutes {
     super()
   };
 
-  changePage() {
-    this.initElm("<elm-spinner />");
-    return super.changePage()
-  };
-
   findCurrentPage() {
     let page = super.findCurrentPage();
     if (page) return page;
@@ -33,10 +28,6 @@ export default class ElmPriorityRoutes extends ElmRoutes {
     } else {
       return pageError
     }
-  };
-
-  initElm(content) {
-    return super.initElm(content)
   }
 };
 

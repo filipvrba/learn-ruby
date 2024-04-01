@@ -1,0 +1,63 @@
+<h1 id="4-instalace">TITLE</h1>
+<p>Instalace Ruby se provádí různými způsoby, které se liší podle platformy, na kterou chcete Ruby nainstalovat. Doporučuji navštívit <a href="https://www.ruby-lang.org/en/downloads/">webové stránky Ruby</a>, kde naleznete specifické postupy pro váš operační systém. V tomto tutoriálu se zaměříme především na použití nástroje <a href="https://rvm.io/">RVM</a> pro instalaci novější verze Ruby.</p>
+<blockquote>
+<h3 id="info">Info</h3>
+<p>RVM (Ruby Version Manager) je nástroj pro správu instalací Ruby a jeho verzí na vašem počítači. Pomocí RVM můžete snadno instalovat různé verze Ruby, přepínat mezi nimi a spravovat jejich závislosti. To je užitečné, pokud pracujete na projektech, které vyžadují určitou verzi Ruby nebo pokud chcete testovat svůj kód na různých verzích jazyka Ruby. RVM také umožňuje vytvářet oddělené „gemsety“, což jsou izolované prostředí pro instalaci Ruby gemů, což pomáhá minimalizovat konflikty mezi různými projekty. Celkově je RVM užitečný nástroj pro správu vaší Ruby vývojového prostředí.</p>
+</blockquote>
+<h2 id="41-n%C3%A1vod">4.1 Návod</h2>
+<p>V tomto návodu si ukážeme, jak nainstalovat nástroj RVM na linuxovou distribuci a následně ho využijeme k instalaci Ruby. Po instalaci jazyka je důležité ověřit, že všechno proběhlo správně a můžeme začít používat Ruby interpret.</p>
+<h2 id="411-instalace-rvm">4.1.1 Instalace RVM</h2>
+<p>Pro instalaci je nezbytné mít nainstalovaný nástroj 'gpg2', což je program určený pro šifrování a digitální podpisy zpráv. Je běžně využíván v prostředích, kde je nutné zabezpečit komunikaci a data prostřednictvím šifrování a digitálních podpisů, například při manipulaci se soubory. Ujistěte se, že máte tento nástroj již nainstalovaný.</p>
+<p><em>Zde je příkaz instalace 'gpg2' nástroje:</em></p>
+<pre class="hljs"><code><div>sudo apt install gnupg2
+</div></code></pre>
+<p>Po dokončení instalace nástroje nyní pokračujeme v zápisu klíčů pro konkrétní server. Pokud se při tomto procesu vyskytne chyba, doporučuji navštívit <a href="https://rvm.io/rvm/security">web RVM Security</a>, kde jsou popsány různé možnosti chyb a způsoby jejich řešení v oblasti zabezpečení.</p>
+<p><em>Zde je příkaz pro zápis klíčů:</em></p>
+<pre class="hljs"><code><div>gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</div></code></pre>
+<p>Po dokončení tohoto kroku můžeme konečně přistoupit k instalaci nástroje RVM. Postupuje se tak, že stáhneme potřebná data ze serveru a poté provedeme jeho spuštění, čímž začne instalace RVM nástroje.</p>
+<p><em>Zde je příkaz který spustí instalaci nástroje:</em></p>
+<pre class="hljs"><code><div>curl -sSL https://get.rvm.io | bash -s stable
+</div></code></pre>
+<p>Po dokončení instalace nástroje RVM budeme pokračovat vložením dalšího příkazu, který umožní spuštění spustitelného souboru pro RVM nástroj.</p>
+<p><em>Tímto příkazem to učiníme:</em></p>
+<pre class="hljs"><code><div><span class="hljs-built_in">source</span> <span class="hljs-variable">$HOME</span>/.rvm/scripts/rvm
+</div></code></pre>
+<h2 id="412-instalace-ruby">4.1.2 Instalace Ruby</h2>
+<p>Nyní jsme připraveni na instalaci programovacího jazyka Ruby. Spustíme nástroj RVM a prostřednictvím něj nainstalujeme aktuální verzi. Aktuální verzi zjistíme na webové stránce stahování, kde jsou uvedeny informace o nejnovější verzi Ruby jazyka. Pro tento návod je aktuální verze '3.3.0', a proto si tuto verzi nainstalujeme.</p>
+<p><img src="./png/ruby_version_01.png" alt="ruby_version_01"></p>
+<p>(pic. 1) <a href="https://www.ruby-lang.org/en/downloads/">Webová stránka Ruby downloads</a>, kde jsou poskytovány informace o aktuální a stabilní verzi.</p>
+<p>Instalace může trvat delší dobu, zejména pokud nástroj RVM nenajde binární soubory. Toto je způsobeno tím, že kompletní interpret Ruby bude kompilován pro váš hardware. Očekávejte, že během kompilace nástroj RVM stáhne potřebné balíčky. Celý proces je plně automatizovaný, a během něj vás program bude informovat o aktuálních operacích, které provádí.</p>
+<p><em>Zde je příkaz pro instalaci Ruby ve verzi 3.3.0:</em></p>
+<pre class="hljs"><code><div>rvm install ruby-3.3.0
+</div></code></pre>
+<p><img src="./png/ruby_install_01.png" alt="ruby_install_01"></p>
+<p>(pic. 2) Celkový proces instalace Ruby jazyka.</p>
+<h2 id="413-kontrola-verze">4.1.3 Kontrola verze</h2>
+<p>Po instalaci je vhodné zkontrolovat verzi Ruby interpreta. Nejprve ověříme, zda je RVM správně nastaven na aktuální verzi Ruby jazyka, a případně upravíme nastavení, aby odpovídalo požadované verzi, kterou chceme používat.</p>
+<p><em>Tady je příkaz pro výpis nainstalovaných verzí Ruby jazyka:</em></p>
+<pre class="hljs"><code><div>rvm list
+</div></code></pre>
+<p>Výše uvedený příkaz zobrazí všechny dostupné verze Ruby jazyka spolu s jejich prioritou. Pokud nemáte nastavenou výchozí verzi Ruby, budete na toto upozorněni a RVM vás nabádá k provedení určitého příkazu. Postupujte podle pokynů RVM, abyste správně nastavili spustitelnou verzi Ruby interpreta jako výchozí.</p>
+<p>Poté můžeme otestovat, zda je Ruby správně spustitelný. Doporučuje se vypnout a znovu zapnout terminál, což zajistí, že bude správně načtena cesta k Ruby interpretu a že jej budeme schopni spustit.</p>
+<p><em>Tento příkaz zobrazí verzi Ruby jazyka:</em></p>
+<pre class="hljs"><code><div>ruby -v
+</div></code></pre>
+<blockquote>
+<h3 id="info">Info</h3>
+<p>Pokud vidíte verzi Ruby, je správně nainstalován!</p>
+<pre class="hljs"><code><div>ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [x86_64-linux]
+</div></code></pre>
+</blockquote>
+<h2 id="42-nelze-spustit-interpret">4.2 Nelze spustit interpret</h2>
+<p>Pokud jste postupovali podle návodu a RVM je správně nastaven na aktuální verzi Ruby, ale stále se vám nedaří spustit interpret pro zobrazení jeho verze, může to být způsobeno neočekávanou chybou v distribuci Linuxu. Tuto chybu lze snadno vyřešit tím, že do souboru <em>&quot;.bashrc&quot;</em> přidáte určitou cestu. Tím zajistíme, že se interpret bude spouštět správně.</p>
+<p><em>Otevřeme soubor pomocí nano editoru:</em></p>
+<pre class="hljs"><code><div>nano ~/.bashrc
+</div></code></pre>
+<blockquote>
+<h3 id="info">Info</h3>
+<p>Pokud nemáte nainstalovaný textový editor Nano, nainstalujte si ho pomocí správce balíčků.</p>
+</blockquote>
+<p>V tomto souboru se přesuneme úplně dolů na konec řádku a tam vložíme určitý text. Poté soubor uložíme, ukončíme editor Nano a následně restartujeme terminál tím, že ho zavřeme a znovu otevřeme. Tímto postupem by měla chyba zmizet a můžeme spustit interpret a zjistit jeho verzi.</p>
+<pre class="hljs"><code><div>[[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;&amp; source &quot;$HOME/.rvm/scripts/rvm&quot; # Load RVM into a shell session *as a function*
+</div></code></pre>

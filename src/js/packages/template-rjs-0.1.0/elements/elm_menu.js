@@ -24,8 +24,8 @@ export default class ElmMenu extends HTMLElement {
 
         let hash = page.endpoint.replaceAll("/", "-");
         aLi.push(`${`
-        <li>
-          <a href='#${hash}'>${page.title}</a>
+        <li class='list-group-item'>
+          <a class='nav-link' href='#${hash}'>${page.title}</a>
         </li>
         `}`)
       };
@@ -33,7 +33,11 @@ export default class ElmMenu extends HTMLElement {
       return aLi.join("")
     };
 
-    let template = `${`\n<ul>\n  ${lLi()}\n</ul>\n    `}`;
+    let template = `${`
+<ul class='list-group list-group-flush'>
+  ${lLi()}
+</ul>
+    `}`;
     return this.innerHTML = template
   }
 }

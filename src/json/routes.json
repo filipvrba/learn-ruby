@@ -6,18 +6,33 @@
       "priority": 0
     },
     {
-      "title": "Home",
-      "endpoint": "home",
-      "priority": 2
+      "title": "Kategorie",
+      "endpoint": "kategorie",
+      "priority": 10
     },
     {
-      "title": "Profile",
-      "endpoint": "home/profile",
+      "title": "1 Co je Ruby",
+      "endpoint": "01_co_je_ruby",
       "priority": 1
     },
     {
-      "title": "Test",
-      "endpoint": "home/profile",
+      "title": "2 Klíčové vlastnosti",
+      "endpoint": "02_klicove_vlastnosti",
+      "priority": 1
+    },
+    {
+      "title": "3 Ruby vs Python",
+      "endpoint": "03_ruby_vs_python",
+      "priority": 1
+    },
+    {
+      "title": "4 Instalace",
+      "endpoint": "04_instalace",
+      "priority": 1
+    },
+    {
+      "title": "5 Interpret a IRB",
+      "endpoint": "05_interpret_irb",
       "priority": 1
     }
   ]

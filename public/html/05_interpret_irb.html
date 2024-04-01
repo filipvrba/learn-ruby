@@ -1,0 +1,24 @@
+<h1 id="5-interpret-a-irb">TITLE</h1>
+<p>Budeme interpret často používat pro spouštění Ruby skriptů, a je důležité vědět, jakým způsobem přes něj spustit určitý skript. Při psaní skriptu se rovněž učíme o Ruby funkcích. Abychom nemuseli kvůli jedné funkci spouštět celý skript, existuje program s názvem IRB.</p>
+<p>IRB je zkratka pro <em>'Interaktivní Ruby'</em>. Jedná se o interaktivní interpret jazyka Ruby, který umožňuje uživatelům psát a vykonávat Ruby kód přímo v příkazovém řádku nebo v konzolovém rozhraní. IRB poskytuje prostředí pro zkoušení a experimentování s Ruby kódem, rychlou kontrolu syntaxe a chování Ruby výrazů a funkcí. Je to užitečný nástroj pro vývojáře, kteří chtějí rychle testovat a ladit svůj kód, a také pro ty, kteří se učí Ruby a potřebují interaktivní prostředí pro zkoumání jeho různých vlastností.</p>
+<h2 id="51-jednoduch%C3%BD-program">5.1 Jednoduchý program</h2>
+<p>Abychom si vše vyzkoušeli, napíšeme jednoduchý program, který vypíše <em>'Hello World'</em> do terminálu. K tomu napíšeme Ruby skript, který bude spouštěn interpretem. Poté tento jednoduchý program napíšeme v IRB a uvidíme, jaké jsou jeho odlišnosti.</p>
+<h2 id="511-interpret">5.1.1 Interpret</h2>
+<p>Interpret potřebuje skript k provedení, takže si vytvoříme nový soubor s názvem <em>'hello.rb'</em> v domovské složce. Soubor označíme příponou <em>'.rb'</em>, abychom předem věděli, že se jedná o Ruby skript. Do tohoto skriptu napíšeme metodu <em>'puts'</em>, do které vložíme řetězec znaků <em>&quot;Hello World&quot;</em>. Soubor musíme uložit, aby ho mohl interpret Ruby přečíst. Pak už jen stačí zavolat interpreta a uvést mu správnou cestu k souboru <em>'hello.rb'</em>. Pokud v konzoli uvidíte <em>'Hello World'</em>, úspěšně jste spustili Ruby skript.</p>
+<p><em>Zde je script souboru 'hello.rb':</em></p>
+<pre class="hljs"><code><div><span class="hljs-comment"># ~/hello.rb</span>
+
+puts <span class="hljs-string">"Hello World"</span>
+</div></code></pre>
+<p><em>Tímto příkazem spustíme Ruby skript prostřednictvím interpreta:</em></p>
+<pre class="hljs"><code><div>ruby hello.rb
+</div></code></pre>
+<h2 id="512-irb">5.1.2 IRB</h2>
+<p>U IRB probíhá jiný proces než u běžného interpretu. Pro spuštění interaktivní konzole stačí použít příkaz <em>'irb'</em>. Po spuštění se zobrazí verze Ruby jazyka a vedle ní číslo řádku s ukazatelem, že můžeme psát skripty. Když napíšeme <em>'puts &quot;Hello World&quot;'</em> a stiskneme Enter, IRB nám vypíše do terminálu <em>'Hello World'</em> s návratovou hodnotou <em>'nil'</em>.</p>
+<p>Interaktivní konzole nám tedy ukazuje, že metoda <em>'puts'</em> vrací hodnotu. V Ruby jazyce je to normální stav, protože všechny funkce vrací nějakou hodnotu. Můžeme si též všimnout, že při psaní metody <em>'puts'</em> nám IRB nabízí již předem připravené metody, které můžeme použít. To je užitečné, pokud nevíme přesně, jak se jmenuje požadovaná funkce, nebo když chceme zkoušet jiné funkce pro testování.</p>
+<p><img src="./png/irb_01.png" alt="irb_01"></p>
+<p>(pic. 3) Interaktivní konzole pro Ruby jazyk s již vytištěnou metodou a zobrazenou nabídkou funkcí.</p>
+<blockquote>
+<h3 id="info">Info</h3>
+<p>Pokud chceme opustit Interaktivní konzoli, napíšeme příkaz <em>'exit'</em>, který ji ukončí a vrátí nás zpět do normálního stavu v terminálu.</p>
+</blockquote>

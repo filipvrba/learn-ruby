@@ -7,11 +7,6 @@ export default class ElmPriorityRoutes < ElmRoutes
     super
   end
 
-  def change_page()
-    init_elm("<elm-spinner />")
-    super
-  end
-
   def find_current_page()
     page = super
     if page
@@ -38,9 +33,5 @@ export default class ElmPriorityRoutes < ElmRoutes
     else
       return page_error
     end
-  end
-
-  def init_elm(content)
-    super content
   end
 end

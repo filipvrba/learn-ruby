@@ -41,12 +41,16 @@ export default class ElmRoutes extends HTMLElement {
 
     return Net.curl(
       `./html/${fileName}.html`,
-      content => this.initElm(content)
+      content => this.initElm(content, page)
     )
   };
 
-  initElm(content) {
-    let template = `${`\n    ${content}\n    `}`;
+  initElm(content, page=null) {
+    let template = `${`\n    ${page ? content.replace(
+      "TITLE",
+      page.title
+    ) : null}\n    `}`;
+
     return this.innerHTML = template
   }
 }

@@ -24,8 +24,8 @@ export default class ElmMenu < HTMLElement
 
         hash = page.endpoint.gsub('/', '-')
         a_li << """
-        <li>
-          <a href='\##{hash}'>#{page.title}</a>
+        <li class='list-group-item'>
+          <a class='nav-link' href='\##{hash}'>#{page.title}</a>
         </li>
         """
       end
@@ -33,7 +33,7 @@ export default class ElmMenu < HTMLElement
     end
 
     template = """
-<ul>
+<ul class='list-group list-group-flush'>
   #{l_li()}
 </ul>
     """
