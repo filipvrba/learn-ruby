@@ -36,7 +36,7 @@ export default class ElmRoutes extends HTMLElement {
   };
 
   initPage(page) {
-    document.title = page.title;
+    document.title = `${page.title} | ${TITLE_APP}`;
     let fileName = page.endpoint.replaceAll("-", "_");
 
     return Net.curl(

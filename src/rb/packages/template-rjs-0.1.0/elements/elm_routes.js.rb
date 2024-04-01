@@ -34,7 +34,7 @@ export default class ElmRoutes < HTMLElement
   end
 
   def init_page(page)
-    document.title = page.title
+    document.title = "#{page.title} | #{TITLE_APP}"
     
     file_name = page.endpoint.gsub('-', '_')
     Net.curl("./html/#{file_name}.html") do |content|

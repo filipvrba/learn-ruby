@@ -7,6 +7,8 @@ import './core'
 import './elements'
 
 window.ROUTES_JSON = routes_obj
+TITLE_APP = document.title
+window.TITLE_APP = TITLE_APP
 
 document.querySelector('#app').innerHTML = """
 <div class='container py-3'>
