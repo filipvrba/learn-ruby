@@ -34,6 +34,11 @@
       "title": "5 Interpret a IRB",
       "endpoint": "05_interpret_irb",
       "priority": 1
+    },
+    {
+      "title": "6 Operátory",
+      "endpoint": "06_operatory",
+      "priority": 1
     }
   ]
 }

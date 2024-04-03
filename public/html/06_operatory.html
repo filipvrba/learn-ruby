@@ -1,0 +1,154 @@
+<h1 id="6-oper%C3%A1tory">TITLE</h1>
+<p>Ruby je dynamický a vysoce flexibilní programovací jazyk, který nabízí širokou škálu operátorů pro provádění různých operací. Vedle základních aritmetických a porovnávacích operátorů nabízí Ruby také specifické operátory pro řetězce, bitové operace a podmínky.</p>
+<h2 id="61-z%C3%A1kladn%C3%AD">6.1 Základní</h2>
+<p>Zde se podíváme na několik základních typů operátorů v Ruby a jak je použít. Používají se jako základní stavební kameny programovacích jazyků, které slouží k provádění různých aritmetických, logických a porovnávacích operací nad daty. Tyto operátory se běžně používají v programování pro manipulaci s hodnotami a vyhodnocování podmínek.</p>
+<h2 id="611-aritmetick%C3%A9-oper%C3%A1tory">6.1.1 Aritmetické operátory</h2>
+<p>Aritmetické operátory se používají k provádění základních matematických operací.</p>
+<ul>
+<li><strong>+</strong> (sčítání)</li>
+<li><strong>-</strong> (odčítání)</li>
+<li><strong>*</strong> (násobení)</li>
+<li><strong>/</strong> (dělení)</li>
+<li><strong>%</strong> (modulo, zbytek po dělení)</li>
+<li><strong>**</strong> (umocňování)</li>
+</ul>
+<pre class="hljs"><code><div>a = <span class="hljs-number">5</span>
+b = <span class="hljs-number">2</span>
+
+puts a + b    <span class="hljs-comment"># Výsledek: 7</span>
+puts a - b    <span class="hljs-comment"># Výsledek: 3</span>
+puts a * b    <span class="hljs-comment"># Výsledek: 10</span>
+puts a / b    <span class="hljs-comment"># Výsledek: 2</span>
+puts a % b    <span class="hljs-comment"># Výsledek: 1</span>
+puts a ** b   <span class="hljs-comment"># Výsledek: 25</span>
+</div></code></pre>
+<h2 id="612-porovn%C3%A1vac%C3%AD-oper%C3%A1tory">6.1.2 Porovnávací operátory</h2>
+<p>Porovnávací operátory se používají k porovnání hodnot.</p>
+<ul>
+<li><strong>==</strong> (rovnost)</li>
+<li><strong>!=</strong> (nerovnost)</li>
+<li><strong>&gt;</strong> (větší než)</li>
+<li><strong>&lt;</strong> (menší než)</li>
+<li><strong>&gt;=</strong> (větší nebo rovno)</li>
+<li><strong>&lt;=</strong> (menší nebo rovno)</li>
+</ul>
+<pre class="hljs"><code><div>a = <span class="hljs-number">5</span>
+b = <span class="hljs-number">2</span>
+
+puts a == b   <span class="hljs-comment"># Výsledek: false</span>
+puts a != b   <span class="hljs-comment"># Výsledek: true</span>
+puts a &gt; b    <span class="hljs-comment"># Výsledek: true</span>
+puts a &lt; b    <span class="hljs-comment"># Výsledek: false</span>
+puts a &gt;= b   <span class="hljs-comment"># Výsledek: true</span>
+puts a &lt;= b   <span class="hljs-comment"># Výsledek: false</span>
+</div></code></pre>
+<h2 id="613-logick%C3%A9-oper%C3%A1tory">6.1.3 Logické operátory</h2>
+<p>Logické operátory se používají k provádění logických operací.</p>
+<ul>
+<li><strong>&amp;&amp;</strong> (a, logické &quot;a&quot;)</li>
+<li><strong>||</strong> (nebo, logické &quot;nebo&quot;)</li>
+<li><strong>!</strong> (negace, logické &quot;ne&quot;)</li>
+</ul>
+<pre class="hljs"><code><div>a = <span class="hljs-literal">true</span>
+b = <span class="hljs-literal">false</span>
+
+puts a &amp;&amp; b   <span class="hljs-comment"># Výsledek: false</span>
+puts a <span class="hljs-params">||</span> b   <span class="hljs-comment"># Výsledek: true</span>
+puts !a       <span class="hljs-comment"># Výsledek: false</span>
+puts !b       <span class="hljs-comment"># Výsledek: true</span>
+</div></code></pre>
+<h2 id="614-p%C5%99i%C5%99azovac%C3%AD-oper%C3%A1tory">6.1.4 Přiřazovací operátory</h2>
+<p>Přiřazovací operátory se používají k přiřazení hodnoty proměnné.</p>
+<ul>
+<li><strong>=</strong> (přiřazení)</li>
+<li><strong>+=</strong> (sčítání a přiřazení)</li>
+<li><strong>-=</strong> (odčítání a přiřazení)</li>
+<li>*<strong>=</strong> (násobení a přiřazení)</li>
+<li><strong>/=</strong> (dělení a přiřazení)</li>
+<li><strong>%=</strong> (modulo a přiřazení)</li>
+</ul>
+<pre class="hljs"><code><div>a = <span class="hljs-number">5</span>
+
+a += <span class="hljs-number">3</span>  <span class="hljs-comment"># Ekvivalent a = a + 3</span>
+puts a  <span class="hljs-comment"># Výsledek: 8</span>
+
+a -= <span class="hljs-number">3</span>  <span class="hljs-comment"># Ekvivalent a = a - 3</span>
+puts a  <span class="hljs-comment"># Výsledek: 5</span>
+
+a *= <span class="hljs-number">3</span>  <span class="hljs-comment"># Ekvivalent a = a * 3</span>
+puts a  <span class="hljs-comment"># Výsledek: 15</span>
+
+a *= <span class="hljs-number">3</span>  <span class="hljs-comment"># Ekvivalent a = a / 3</span>
+puts a  <span class="hljs-comment"># Výsledek: 5</span>
+
+a %= <span class="hljs-number">3</span>  <span class="hljs-comment"># Ekvivalent a = a % 3</span>
+puts a  <span class="hljs-comment"># Výsledek: 2</span>
+</div></code></pre>
+<h2 id="62-specifick%C3%A9">6.2 Specifické</h2>
+<p>Zde se podíváme na několik specifických typů operátorů v Ruby a jak je použít. Tyto operátory se používají k provádění specifických operací, které mohou být obtížné nebo nepraktické provádět pomocí běžných aritmetických, logických nebo porovnávacích operátorů.</p>
+<p>Tyto specifické operátory umožňují programátorům provádět různé operace v Ruby efektivněji a s méně kódovými řádky. Použití těchto operátorů může zlepšit čitelnost kódu a zkrátit délku kódu při řešení určitých problémů.</p>
+<h2 id="621-oper%C3%A1tory-pro-pr%C3%A1ci-s-%C5%99et%C4%9Bzci">6.2.1 Operátory pro práci s řetězci</h2>
+<p>Tyto operátory umožňují spojování, opakování a formátování řetězců, což je často používaná funkcionalita při práci s textem.</p>
+<ul>
+<li><strong>+</strong> (řetězcová konkatenace)</li>
+<li><strong>*</strong> (opakování řetězce)</li>
+<li><strong>%</strong> (formátování řetězce)</li>
+</ul>
+<pre class="hljs"><code><div>str1 = <span class="hljs-string">"Hello, "</span>
+str2 = <span class="hljs-string">"world!"</span>
+
+puts str1 + str2    <span class="hljs-comment"># Výsledek: Hello, world!</span>
+puts str1 * <span class="hljs-number">3</span>       <span class="hljs-comment"># Výsledek: Hello, Hello, Hello, </span>
+puts <span class="hljs-string">"%s %s"</span> % [str1, str2]  <span class="hljs-comment"># Výsledek: Hello, world!</span>
+</div></code></pre>
+<h2 id="622-bitov%C3%A9-oper%C3%A1tory">6.2.2 Bitové operátory</h2>
+<p>Bitové operátory se v jazyce Ruby používají k manipulaci s binárními hodnotami na úrovni jednotlivých bitů. I když se mohou zdát na první pohled exotické, mají mnoho praktických využití v různých oblastech, jako jsou manipulace s příznaky (flags), šifrování, optimalizace kódu a mnoho dalších.</p>
+<ul>
+<li><strong>&amp;</strong> (bitový and)</li>
+<li><strong>|</strong> (bitový or)</li>
+<li><strong>^</strong> (bitový xor)</li>
+<li><strong>~</strong> (bitová negace)</li>
+<li><strong>&lt;&lt;</strong> (bitový posun doleva)</li>
+<li><strong>&gt;&gt;</strong> (bitový posun doprava)</li>
+</ul>
+<pre class="hljs"><code><div>a = <span class="hljs-number">5</span>  <span class="hljs-comment"># Binárně: 101</span>
+b = <span class="hljs-number">3</span>  <span class="hljs-comment"># Binárně: 011</span>
+
+puts a &amp; b   <span class="hljs-comment"># Výsledek: 1 (binárně: 001)</span>
+puts a <span class="hljs-params">| b   # Výsledek: 7 (binárně: 111)
+puts a ^ b   # Výsledek: 6 (binárně: 110)
+puts ~a      # Výsledek: -6 (binárně: 111...1010)
+puts a &lt;&lt; 1  # Výsledek: 10 (binárně: 1010)
+puts b &gt;&gt; 1  # Výsledek: 1 (binárně: 01)
+</span></div></code></pre>
+<h2 id="623-oper%C3%A1tor-t%C5%99%C3%ADcestn%C3%A9ho-podm%C3%ADn%C4%9Bn%C3%AD">6.2.3 Operátor třícestného podmínění</h2>
+<p>Používá se k vytvoření jednoduchých podmíněných výrazů. Tento operátor umožňuje zapsat podmíněný výraz v jednom řádku, což může vést k čistějšímu a méně zdlouhavému kódu.</p>
+<ul>
+<li><strong>? :</strong> (ternární operátor)</li>
+</ul>
+<pre class="hljs"><code><div>x = <span class="hljs-number">10</span>
+puts x &gt; <span class="hljs-number">5</span> ? <span class="hljs-string">"yes"</span> : <span class="hljs-string">"no"</span>  <span class="hljs-comment"># Výsledek: yes</span>
+</div></code></pre>
+<h2 id="624-oper%C3%A1tor-spole%C4%8Dnosti">6.2.4 Operátor společnosti</h2>
+<p>Operátor společnosti je často využíván v situacích, kdy je potřeba provádět porovnání mezi objekty různých typů, jako jsou čísla, řetězce, objekty tříd atd. Vrací jednu z tří hodnot: -1, 0 nebo 1, což označuje, zda je levá hodnota menší, rovná se, nebo je větší než pravá hodnota.</p>
+<ul>
+<li><strong>&lt;=&gt;</strong> (spaceship operátor)</li>
+</ul>
+<pre class="hljs"><code><div>puts <span class="hljs-number">5</span> &lt;=&gt; <span class="hljs-number">10</span>   <span class="hljs-comment"># Výsledek: -1</span>
+puts <span class="hljs-number">10</span> &lt;=&gt; <span class="hljs-number">10</span>  <span class="hljs-comment"># Výsledek: 0</span>
+puts <span class="hljs-number">10</span> &lt;=&gt; <span class="hljs-number">5</span>   <span class="hljs-comment"># Výsledek: 1</span>
+</div></code></pre>
+<h2 id="625-oper%C3%A1tor-vytv%C3%A1%C5%99en%C3%AD-rozsahu">6.2.5 Operátor vytváření rozsahu</h2>
+<p>Je využíván k definici sekvencí hodnot. Tento operátor umožňuje vytvoření rozsahu hodnot mezi dvěma určenými body.</p>
+<ul>
+<li><strong>..</strong> (dvojitá tečka): <em>Vytváří rozsah, který zahrnuje počáteční a koncovou hodnotu.</em></li>
+<li><strong>...</strong> (trojitá tečka): <em>Vytváří rozsah, který zahrnuje počáteční hodnotu, ale nezahrnuje koncovou hodnotu.</em></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment"># Rozsah hodnot od 1 do 5 (včetně 1 a 5)</span>
+range_inclusive = (<span class="hljs-number">1</span>..<span class="hljs-number">5</span>)
+puts range_inclusive.to_a.inspect  <span class="hljs-comment"># Výstup: [1, 2, 3, 4, 5]</span>
+
+<span class="hljs-comment"># Rozsah hodnot od 1 do 5 (včetně 1, vyjma 5)</span>
+range_exclusive = (<span class="hljs-number">1</span>...<span class="hljs-number">5</span>)
+puts range_exclusive.to_a.inspect  <span class="hljs-comment"># Výstup: [1, 2, 3, 4]</span>
+</div></code></pre>
