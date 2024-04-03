@@ -144,11 +144,9 @@ puts <span class="hljs-number">10</span> &lt;=&gt; <span class="hljs-number">5</
 <li><strong>..</strong> (dvojitá tečka): <em>Vytváří rozsah, který zahrnuje počáteční a koncovou hodnotu.</em></li>
 <li><strong>...</strong> (trojitá tečka): <em>Vytváří rozsah, který zahrnuje počáteční hodnotu, ale nezahrnuje koncovou hodnotu.</em></li>
 </ul>
-<pre class="hljs"><code><div><span class="hljs-comment"># Rozsah hodnot od 1 do 5 (včetně 1 a 5)</span>
-range_inclusive = (<span class="hljs-number">1</span>..<span class="hljs-number">5</span>)
+<pre class="hljs"><code><div>range_inclusive = (<span class="hljs-number">1</span>..<span class="hljs-number">5</span>)
 puts range_inclusive.to_a.inspect  <span class="hljs-comment"># Výstup: [1, 2, 3, 4, 5]</span>
 
-<span class="hljs-comment"># Rozsah hodnot od 1 do 5 (včetně 1, vyjma 5)</span>
 range_exclusive = (<span class="hljs-number">1</span>...<span class="hljs-number">5</span>)
 puts range_exclusive.to_a.inspect  <span class="hljs-comment"># Výstup: [1, 2, 3, 4]</span>
 </div></code></pre>
