@@ -39,6 +39,11 @@
       "title": "6 Operátory",
       "endpoint": "06_operatory",
       "priority": 1
+    },
+    {
+      "title": "7 Proměnné",
+      "endpoint": "07_promenne",
+      "priority": 1
     }
   ]
 }
