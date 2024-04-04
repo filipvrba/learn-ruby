@@ -1,16 +1,27 @@
 <h1 id="7-prom%C4%9Bnn%C3%A9">TITLE</h1>
-<p>Jednou z klíčových konstrukcí v Ruby jsou proměnné, které umožňují ukládat a manipulovat s daty během běhu programu. Podíváme se na základní principy proměnných v Ruby a jejich různé typy.</p>
+<p>V Ruby jsou proměnné považovány za jednu z klíčových stavebních jednotek, které umožňují ukládání a manipulaci s daty v průběhu provádění programu. Tyto proměnné slouží jako kontejnery pro uchovávání informací, které mohou být během běhu programu přiřazovány, měněny a využívány.</p>
+<p>Prozkoumáme zde základní principy proměnných v Ruby, které jsou zásadní pro pochopení fungování tohoto jazyka. Budeme se zabývat různými typy proměnných, které Ruby podporuje, a jakým způsobem lze s nimi pracovat v rámci programování v tomto jazyce.</p>
 <h2 id="71-principy-prom%C4%9Bnn%C3%BDch">7.1 Principy proměnných</h2>
-<p>Principy proměnných v programovacím jazyce Ruby zahrnují několik klíčových konceptů, které jsou specifické pro tento jazyk.</p>
+<p>Principy proměnných v programovacím jazyce Ruby zahrnují několik klíčových konceptů. Tyto koncepty jsou navrženy speciálně pro tento programovací jazyk a jsou základem pro porozumění jeho fungování.</p>
+<p>Jelikož se Ruby řadí mezi dynamické jazyky, jeho principy proměnných se odlišují od jiných jazyků. Tyto zásady zahrnují flexibilitu v přiřazování hodnot proměnným, automatickou správu datových typů a dynamické přetypování.</p>
+<p>Zároveň podporují Ruby specifické koncepty, jako jsou symboly, které jsou klíčovou součástí jazyka a slouží k jednoznačnému označení různých entit v programu.</p>
+<p>Porozumění těmto principům je zásadní pro efektivní práci s proměnnými v Ruby a pro tvorbu robustních a elegantních programů.</p>
 <h2 id="711-dynamick%C3%A9-typov%C3%A1n%C3%AD">7.1.1 Dynamické typování</h2>
-<p>Ruby je dynamicky typovaný jazyk, což znamená, že proměnné nemusí být explicitně deklarovány s typem a mohou měnit svůj typ během běhu programu. To přináší velkou flexibilitu, ale vyžaduje opatrnost při manipulaci s daty.</p>
+<p>Ruby je označován jako dynamicky typovaný programovací jazyk, což znamená, že proměnné v něm nemusí být explicitně deklarovány s určitým typem dat a mohou měnit svůj typ během provádění programu. Tento charakteristický rys přináší významnou flexibilitu v psaní kódu, jelikož programátor není omezen na pevně stanovené typy dat pro proměnné a může snadno přizpůsobovat jejich chování v průběhu programu.</p>
+<p>Avšak, tato flexibilita také vyžaduje opatrnost ze strany programátora. Protože proměnné mohou během běhu programu změnit svůj typ, není možné automaticky předpokládat, jaký typ dat proměnná aktuálně obsahuje. To může vést k neočekávaným chybám a chování programu, pokud není manipulace s daty řádně kontrolována a ošetřena.</p>
+<p>Programátor musí být tedy obezřetný při manipulaci s daty a zajistit, aby byla proměnná vždy používána v souladu s očekávaným chováním a typem dat v daném kontextu.</p>
 <h2 id="712-deklarace-prom%C4%9Bnn%C3%BDch">7.1.2 Deklarace proměnných</h2>
-<p>Proměnné v Ruby se deklarují jednoduše tím, že přiřadíme hodnotu k identifikátoru (názvu proměnné). Deklarace proměnných mohou být prováděny kdekoliv v kódu, ať už v globálním nebo lokálním kontextu.</p>
+<p>V Ruby jsou proměnné deklarovány velmi jednoduše - prostřednictvím přiřazení hodnoty k identifikátoru, kterým je název proměnné. Tento proces je intuitivní a přímočarý, neboť není třeba specifikovat typ proměnné - Ruby automaticky určí typ dat na základě hodnoty, která je proměnné přiřazena.</p>
+<p>Deklarace proměnných může být provedena kdekoliv v kódu, bez ohledu na to, zda se nachází v globálním nebo lokálním kontextu. To znamená, že proměnné mohou být deklarovány buď mimo jakoukoliv funkci či třídu (globální kontext), nebo uvnitř určitého bloku kódu, jako je například funkce nebo metoda (lokální kontext).</p>
+<p>Tato flexibilita umožňuje programátorům využívat proměnné tam, kde jsou potřeba, a zároveň udržovat čistotu a organizovanost svého kódu tím, že deklarace proměnných odpovídají logickým strukturám a kontextům programu.</p>
+<p><em>Příklad deklarace proměnných:</em></p>
 <pre class="hljs"><code><div>x = <span class="hljs-number">10</span>
 name = <span class="hljs-string">"Filip"</span>
 </div></code></pre>
 <h2 id="713-typy-hodnot">7.1.3 Typy hodnot</h2>
-<p>Proměnné v Ruby mohou mít různé typy hodnot, včetně čísel (integer, float), řetězců (string), logických hodnot (boolean), objektů a nil.</p>
+<p>Proměnné v Ruby mají schopnost obsahovat různé typy hodnot, což zahrnuje celá čísla (integer), desetinná čísla (float), řetězce znaků (string), logické hodnoty (boolean), objekty a hodnotu nil.</p>
+<p>Tato široká škála datových typů umožňuje programátorům flexibilně pracovat s různými druhy informací v jejich kódu. Například proměnná může uchovávat číselnou hodnotu, jako je počet nebo cena, řetězec znaků, jako je jméno uživatele nebo název produktu, logickou hodnotu, která určuje stav nebo podmínku, objekt, který reprezentuje entitu s vlastnostmi a metodami, nebo hodnotu nil, která indikuje absenci hodnoty nebo neplatnost.</p>
+<p>Tato rozmanitost typů umožňuje programátorům psát robustní a flexibilní kód, který může manipulovat s různými druhy dat a reagovat na různé situace v průběhu provádění programu.</p>
 <h2 id="72-typy-prom%C4%9Bnn%C3%BDch">7.2 Typy proměnných</h2>
 <p>V Ruby existuje několik základních typů proměnných, které umožňují ukládat a manipulovat s daty v rámci programu.</p>
 <p>Tyto typy proměnných poskytují programátorovi širokou paletu možností pro práci s daty a stavem programu v Ruby. Každý typ proměnné má své specifické vlastnosti a pravidla pro použití, která jsou důležitá dodržovat pro správnou funkcionalitu a čitelnost kódu.</p>
@@ -50,17 +61,17 @@ name = <span class="hljs-string">"Filip"</span>
 <pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>
   <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:name</span>
   <span class="hljs-keyword">attr_reader</span> <span class="hljs-symbol">:age</span>
-  <span class="hljs-keyword">attr_writer</span> <span class="hljs-symbol">:sex</span>
+  <span class="hljs-keyword">attr_writer</span> <span class="hljs-symbol">:city</span>
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span> <span class="hljs-title">name</span>, <span class="hljs-title">age</span></span>
     @name = name
     @age = name
-    @sex = <span class="hljs-literal">nil</span>
+    @city = <span class="hljs-literal">nil</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 
 person = Person.new <span class="hljs-string">'Filip'</span>, <span class="hljs-number">29</span>
-person.sex = <span class="hljs-string">'man'</span>
+person.city = <span class="hljs-string">'Kroměříž'</span>
 </div></code></pre>
 <h2 id="724-t%C5%99%C3%ADdn%C3%AD-prom%C4%9Bnn%C3%A9">7.2.4 Třídní proměnné</h2>
 <p>Třídní proměnné v Ruby jsou proměnné, které jsou sdíleny mezi všemi instancemi třídy a jsou přístupné jako atributy třídy. Na rozdíl od instance proměnných, které jsou spojeny s konkrétní instancí objektu, třídní proměnné existují pouze jednou pro každou třídu a jsou sdíleny mezi všemi instancemi této třídy.</p>
