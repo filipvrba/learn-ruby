@@ -1,0 +1,50 @@
+<h1 id="8-datov%C3%A9-typy">TITLE</h1>
+<p>Datové typy představují základní stavební bloky programování, které poskytují programátorům prostředky k uchovávání, manipulaci a zpracování různorodých forem dat. To znamená, že tyto typy definují různé struktury a formáty, ve kterých jsou data uložena a organizována v počítačové paměti a umožňují programátorům efektivně pracovat s těmito daty pomocí různých operací a funkcí. Bez správných datových typů by bylo obtížné a neefektivní zpracovávat informace, které jsou základním stavebním kamenem většiny programů a aplikací.</p>
+<h2 id="81-integer">8.1 Integer</h2>
+<p>Integer, jako datový typ v programovacím jazyce Ruby, je určen k reprezentaci celých čísel, a to bez ohledu na jejich znaménko. To znamená, že může obsahovat jak kladná celá čísla (například 1, 2, 3), tak záporná celá čísla (například -1, -2, -3), a také nulové hodnoty (jako například 0). Tento datový typ poskytuje prostředky pro práci s celými čísly, což zahrnuje základní aritmetické operace jako sčítání, odčítání, násobení a dělení. Díky tomu programátoři mohou efektivně manipulovat s celými čísly a provádět různé výpočty a operace v jejich programovacím kódu.</p>
+<pre class="hljs"><code><div>age = <span class="hljs-number">30</span>
+temperature = -<span class="hljs-number">10</span>
+</div></code></pre>
+<h2 id="82-float">8.2 Float</h2>
+<p>Float, jakožto datový typ v programovacím jazyce Ruby, slouží k reprezentaci desetinných čísel, která mohou zahrnovat i čísla s pohyblivou řádovou čárkou. To znamená, že Float umožňuje pracovat s hodnotami, které obsahují desetinnou část. Tento datový typ se často využívá pro situace, kde je vyžadována vyšší přesnost a detailnost, jako jsou finanční výpočty, vědecké experimenty nebo zpracování fyzikálních veličin. Float poskytuje prostředky pro provádění přesných aritmetických operací, což umožňuje programátorům manipulovat s číselnými hodnotami s vysokou úrovní přesnosti a spolehlivosti.</p>
+<pre class="hljs"><code><div>pi = <span class="hljs-number">3.14</span>
+rate = <span class="hljs-number">0</span>.<span class="hljs-number">05</span>
+</div></code></pre>
+<h2 id="83-string">8.3 String</h2>
+<p>String je v Ruby datový typ sloužící k reprezentaci textových řetězců, což jsou sekvence znaků. Tento typ dat umožňuje uživatelům pracovat s textem a provádět na něm různé manipulace a operace. Řetězce mohou být uzavřeny v jednoduchých nebo dvojitých uvozovkách, což umožňuje flexibilitu při práci s textovými daty a zároveň umožňuje vkládat speciální znaky, jako jsou nové řádky nebo uvozovky, bez potřeby speciálního escapování. Díky datovému typu String mohou programátoři v Ruby manipulovat s textovými daty, provádět operace jako je spojování řetězců, vyhledávání a nahrazování podřetězců, rozdělování řetězců na menší části a mnoho dalších. To z něj činí klíčový nástroj pro práci s textovými daty v Ruby.</p>
+<pre class="hljs"><code><div>name = <span class="hljs-string">'Alice'</span>
+message = <span class="hljs-string">"Hello, <span class="hljs-subst">#{name}</span>!"</span>
+</div></code></pre>
+<h2 id="84-boolean">8.4 Boolean</h2>
+<p>Boolean, jako datový typ v Ruby, slouží k reprezentaci logických hodnot, které mají dvě možné hodnoty: <em>'true'</em> a <em>'false'</em>. Tyto hodnoty jsou základem logiky a rozhodování v programování, kde <em>'true'</em> vyjadřuje pravdu a <em>'false'</em> nepravdu. Booleanovské hodnoty jsou klíčové pro vyhodnocování podmínek a provádění logických operací, jako jsou například porovnávání hodnot, kontrola stavu proměnných a rozhodování o průběhu programu. Jsou využívány ve většině programovacích jazyků jako základní stavební kameny pro implementaci řízení toku programu a logického rozhodování. V Ruby jsou booleanovské hodnoty často používány v podmínkách, cyklech a různých logických výrazech pro řízení chování programu na základě různých podmínek a situací.</p>
+<pre class="hljs"><code><div>is_active = <span class="hljs-literal">true</span>
+is_finished = <span class="hljs-literal">false</span>
+</div></code></pre>
+<h2 id="85-array">8.5 Array</h2>
+<p>Array, v Ruby nazývané také pole, je datová struktura určená pro ukládání kolekcí prvků. Tato struktura umožňuje uživatelům organizovat a udržovat skupiny hodnot nebo objektů v jednom kontejneru. Každý prvek v poli je uspořádán podle indexu, který slouží k jednoznačnému identifikaci prvku v poli. Je důležité poznamenat, že indexování v poli začíná od nuly, což znamená, že první prvek v poli má index 0, druhý prvek má index 1, a tak dále. Tento způsob indexování je běžný v mnoha programovacích jazycích a umožňuje jednoduchý a efektivní způsob přístupu k prvkům v poli pomocí jejich pořadí. Array je často využíváno pro uchovávání a manipulaci s kolekcemi dat, jako jsou seznamy, pole hodnot, seznamy složitějších objektů nebo dokonce jako základ pro implementaci dalších datových struktur.</p>
+<pre class="hljs"><code><div>numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+names = [<span class="hljs-string">'Alice'</span>, <span class="hljs-string">'Bob'</span>, <span class="hljs-string">'Charlie'</span>]
+
+puts names[<span class="hljs-number">0</span>]  <span class="hljs-comment"># Výsledek: Alice</span>
+puts names[<span class="hljs-number">2</span>]  <span class="hljs-comment"># Výsledek: Charlie</span>
+</div></code></pre>
+<h2 id="86-hash">8.6 Hash</h2>
+<p>Hash, známý také jako asociativní pole, je datová struktura používaná v Ruby pro ukládání kolekcí prvků ve formě klíč-hodnota. To znamená, že každý prvek v hashi je tvořen dvojicí, která obsahuje klíč a k němu přiřazenou hodnotu. Klíč musí být v hashi unikátní, což znamená, že nemůže existovat dva prvky s totožným klíčem. Tato unikátnost klíčů umožňuje hashům poskytovat efektivní a rychlý přístup k datům, protože program může okamžitě lokalizovat hodnotu v hashi pomocí klíče bez potřeby procházení celé kolekce. Hash je široce využíván v Ruby pro uchovávání a organizaci dat, jako jsou například slovníky, konfigurační soubory, údaje o uživatelích a mnoho dalších. Jeho schopnost rychlého vyhledávání a přístupu k datům činí z hashů klíčový nástroj pro práci s daty v Ruby.</p>
+<pre class="hljs"><code><div>person = { <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'John'</span>, <span class="hljs-symbol">:age</span> =&gt; <span class="hljs-number">30</span>, <span class="hljs-symbol">city:</span> <span class="hljs-string">'New York'</span> }
+
+puts person[<span class="hljs-string">'name'</span>]  <span class="hljs-comment"># Výsledek: John</span>
+puts person[<span class="hljs-symbol">:age</span>]    <span class="hljs-comment"># Výsledek: 30</span>
+puts person[<span class="hljs-symbol">:city</span>]   <span class="hljs-comment"># Výsledek: New York</span>
+</div></code></pre>
+<h2 id="87-symbol">8.7 Symbol</h2>
+<p>Symbol, jako datový typ v programovacím jazyce Ruby, slouží k identifikaci různých hodnot a entit v programu. Jedná se o neměnný datový typ, což znamená, že symboly nelze změnit nebo upravit po jejich vytvoření. Jsou navrženy tak, aby poskytovaly efektivní a konzistentní způsob identifikace, což znamená, že jednoznačně identifikují různé entity a hodnoty v rámci programu. Symboly jsou často využívány pro označení klíčových slov, názvů metod, konstant, klíčů v hashích a dalších identifikátorů. Díky své neměnné povaze jsou symboly vhodné pro situace, kde je potřeba jednoznačně identifikovat určité hodnoty nebo entity a zároveň minimalizovat režii paměti a výpočetních prostředků.</p>
+<pre class="hljs"><code><div>status = <span class="hljs-symbol">:active</span>
+</div></code></pre>
+<h2 id="88-nil">8.8 Nil</h2>
+<p>Nil je v Ruby speciální hodnota, která slouží k reprezentaci stavu absence hodnoty nebo nedostatečnosti dat v určité proměnné. Tato hodnota je klíčová pro označení situací, kdy proměnná nebyla inicializována nebo kdy nebyla přiřazena žádná hodnota. Použití nilu umožňuje programátorům explicitně označit, že proměnná je momentálně nevyplněná, a to bez nutnosti přiřazování falešných hodnot jako 0 nebo prázdného řetězce. Nil se běžně využívá v situacích, kde je potřeba jasně označit absenci dat, například při načítání dat z databáze, kdy může být některý sloupec nevyplněný, nebo při manipulaci s proměnnými, které nemusí mít vždy definovanou hodnotu.</p>
+<pre class="hljs"><code><div>result = <span class="hljs-literal">nil</span>
+</div></code></pre>
+<h2 id="89-range">8.9 Range</h2>
+<p>Range, neboli rozsah, je v Ruby datový typ, který definuje posloupnost hodnot mezi dvěma určenými body. Tyto body mohou být jak čísla, tak i jiné hodnoty, jako například písmena, datumy nebo symboly. Rozsah umožňuje jednoduchý způsob definice a práce s posloupnostmi hodnot bez nutnosti explicitního výčtu jednotlivých prvků. Typické použití rozsahu je pro iteraci přes určitý rozsah hodnot v cyklech, kde umožňuje provádět opakované operace s postupně se zvyšující nebo snižující hodnotou. Díky své flexibilitě a jednoduchosti použití je Range často využíván pro různé účely, jako jsou například generování seznamů čísel, filtrování dat nebo specifikace podmínek pro vyhledávání.</p>
+<pre class="hljs"><code><div>numbers_range = <span class="hljs-number">1</span>..<span class="hljs-number">10</span>
+</div></code></pre>

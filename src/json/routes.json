@@ -12,37 +12,42 @@
     },
     {
       "title": "1 Co je Ruby",
-      "endpoint": "01_co_je_ruby",
+      "endpoint": "zaklady/01_co_je_ruby",
       "priority": 1
     },
     {
       "title": "2 Klíčové vlastnosti",
-      "endpoint": "02_klicove_vlastnosti",
+      "endpoint": "zaklady/02_klicove_vlastnosti",
       "priority": 1
     },
     {
       "title": "3 Ruby vs Python",
-      "endpoint": "03_ruby_vs_python",
+      "endpoint": "zaklady/03_ruby_vs_python",
       "priority": 1
     },
     {
       "title": "4 Instalace",
-      "endpoint": "04_instalace",
+      "endpoint": "zaklady/04_instalace",
       "priority": 1
     },
     {
       "title": "5 Interpret a IRB",
-      "endpoint": "05_interpret_irb",
+      "endpoint": "zaklady/05_interpret_irb",
       "priority": 1
     },
     {
       "title": "6 Operátory",
-      "endpoint": "06_operatory",
+      "endpoint": "zaklady/06_operatory",
       "priority": 1
     },
     {
       "title": "7 Proměnné",
-      "endpoint": "07_promenne",
+      "endpoint": "zaklady/07_promenne",
+      "priority": 1
+    },
+    {
+      "title": "8 Datové typy",
+      "endpoint": "zaklady/08_datove_typy",
       "priority": 1
     }
   ]
