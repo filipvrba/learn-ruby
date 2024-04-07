@@ -3,7 +3,8 @@
 <h2 id="61-z%C3%A1kladn%C3%AD">6.1 Základní</h2>
 <p>Zde se podíváme na několik základních typů operátorů v Ruby a jak je použít. Používají se jako základní stavební kameny programovacích jazyků, které slouží k provádění různých aritmetických, logických a porovnávacích operací nad daty. Tyto operátory se běžně používají v programování pro manipulaci s hodnotami a vyhodnocování podmínek.</p>
 <h2 id="611-aritmetick%C3%A9-oper%C3%A1tory">6.1.1 Aritmetické operátory</h2>
-<p>Aritmetické operátory se používají k provádění základních matematických operací.</p>
+<p>Aritmetické operátory představují klíčový nástroj v programování, včetně jazyka Ruby, pro provádění základních matematických operací. Tyto operátory umožňují programátorům provádět širokou škálu aritmetických operací, jako jsou sčítání, odčítání, násobení a dělení.</p>
+<p>Kromě těchto základních operací aritmetické operátory mohou také zahrnovat operace jako je modulo (zbytek po dělení), mocnina a další. Díky aritmetickým operátorům mohou vývojáři manipulovat s čísly a provádět výpočty potřebné pro správné fungování jejich programů.</p>
 <ul>
 <li><strong>+</strong> (sčítání)</li>
 <li><strong>-</strong> (odčítání)</li>
@@ -23,7 +24,7 @@ puts a % b    <span class="hljs-comment"># Výsledek: 1</span>
 puts a ** b   <span class="hljs-comment"># Výsledek: 25</span>
 </div></code></pre>
 <h2 id="612-porovn%C3%A1vac%C3%AD-oper%C3%A1tory">6.1.2 Porovnávací operátory</h2>
-<p>Porovnávací operátory se používají k porovnání hodnot.</p>
+<p>Porovnávací operátory slouží k porovnání hodnot různých proměnných nebo výrazů. Tyto operátory umožňují programátorům vyjádřit a řídit vztahy mezi hodnotami, jako jsou rovnost, nerovnost, větší nebo menší než, a další. Díky porovnávacím operátorům mohou vývojáři efektivně řídit chování svých programů na základě podmínek definovaných pomocí těchto porovnání.</p>
 <ul>
 <li><strong>==</strong> (rovnost)</li>
 <li><strong>!=</strong> (nerovnost)</li>
@@ -43,22 +44,24 @@ puts a &gt;= b   <span class="hljs-comment"># Výsledek: true</span>
 puts a &lt;= b   <span class="hljs-comment"># Výsledek: false</span>
 </div></code></pre>
 <h2 id="613-logick%C3%A9-oper%C3%A1tory">6.1.3 Logické operátory</h2>
-<p>Logické operátory se používají k provádění logických operací.</p>
+<p>Tyto operátory umožňují programátorům definovat vztahy mezi různými logickými výrazy a hodnotami. Pomocí logických operátorů, jako jsou AND, OR a NOT, mohou programátoři vytvářet složitější logické výrazy a podmínky, které ovlivňují chování programu.</p>
+<p>Logické operátory jsou klíčové pro správné fungování kontrolních struktur, cyklů a podmíněných výrazů v programovacím kódu. Jsou nezbytné pro rozhodování, která část kódu se má vykonat v závislosti na splnění určitých podmínek, a tak přispívají k účinnosti a flexibilitě programů</p>
 <ul>
-<li><strong>&amp;&amp;</strong> (a, logické &quot;a&quot;)</li>
-<li><strong>||</strong> (nebo, logické &quot;nebo&quot;)</li>
-<li><strong>!</strong> (negace, logické &quot;ne&quot;)</li>
+<li><strong>&amp;&amp;</strong> (konjunkce, logické &quot;AND&quot;)</li>
+<li><strong>||</strong> (disjunkce, logické &quot;OR&quot;)</li>
+<li><strong>!</strong> (negace, logické &quot;NOT&quot;)</li>
 </ul>
 <pre class="hljs"><code><div>a = <span class="hljs-literal">true</span>
 b = <span class="hljs-literal">false</span>
 
 puts a &amp;&amp; b   <span class="hljs-comment"># Výsledek: false</span>
-puts a <span class="hljs-params">||</span> b   <span class="hljs-comment"># Výsledek: true</span>
+puts a || b   <span class="hljs-comment"># Výsledek: true</span>
 puts !a       <span class="hljs-comment"># Výsledek: false</span>
 puts !b       <span class="hljs-comment"># Výsledek: true</span>
 </div></code></pre>
 <h2 id="614-p%C5%99i%C5%99azovac%C3%AD-oper%C3%A1tory">6.1.4 Přiřazovací operátory</h2>
-<p>Přiřazovací operátory se používají k přiřazení hodnoty proměnné.</p>
+<p>Tyto operátory jsou nezbytné pro manipulaci s daty v programu a umožňují programátorům ukládat a aktualizovat hodnoty v proměnných.</p>
+<p>V jazyce Ruby je přiřazovací operátor běžně značen znakem <em>'='</em>, který označuje, že hodnota na pravé straně operátoru bude přiřazena proměnné na levé straně. Použití přiřazovacích operátorů je nezbytné pro správné fungování programu, protože umožňují uchování a manipulaci s daty během vykonávání kódu.</p>
 <ul>
 <li><strong>=</strong> (přiřazení)</li>
 <li><strong>+=</strong> (sčítání a přiřazení)</li>
@@ -88,7 +91,9 @@ puts a  <span class="hljs-comment"># Výsledek: 2</span>
 <p>Zde se podíváme na několik specifických typů operátorů v Ruby a jak je použít. Tyto operátory se používají k provádění specifických operací, které mohou být obtížné nebo nepraktické provádět pomocí běžných aritmetických, logických nebo porovnávacích operátorů.</p>
 <p>Tyto specifické operátory umožňují programátorům provádět různé operace v Ruby efektivněji a s méně kódovými řádky. Použití těchto operátorů může zlepšit čitelnost kódu a zkrátit délku kódu při řešení určitých problémů.</p>
 <h2 id="621-oper%C3%A1tory-pro-pr%C3%A1ci-s-%C5%99et%C4%9Bzci">6.2.1 Operátory pro práci s řetězci</h2>
-<p>Tyto operátory umožňují spojování, opakování a formátování řetězců, což je často používaná funkcionalita při práci s textem.</p>
+<p>Tyto operátory jsou často používané při manipulaci s řetězci znaků v programovacím kódu.</p>
+<p>Například, spojovací operátor slouží k připojení dvou řetězců do jednoho, zatímco operátor pro opakování umožňuje vytvořit řetězec opakovaním určitého znaku nebo řetězce. Formátovací operátory umožňují programátorům definovat speciální vzory pro formátování textu, což je užitečné při generování strukturovaného výstupu, jako jsou tabulky nebo zprávy.</p>
+<p>Tato funkcionalita je často potřebná při práci s textovými daty v programu a přispívá k jeho flexibilitě a schopnosti manipulovat s textem podle potřeby</p>
 <ul>
 <li><strong>+</strong> (řetězcová konkatenace)</li>
 <li><strong>*</strong> (opakování řetězce)</li>
@@ -102,7 +107,9 @@ puts str1 * <span class="hljs-number">3</span>       <span class="hljs-comment">
 puts <span class="hljs-string">"%s %s"</span> % [str1, str2]  <span class="hljs-comment"># Výsledek: Hello, world!</span>
 </div></code></pre>
 <h2 id="622-bitov%C3%A9-oper%C3%A1tory">6.2.2 Bitové operátory</h2>
-<p>Bitové operátory se v jazyce Ruby používají k manipulaci s binárními hodnotami na úrovni jednotlivých bitů. I když se mohou zdát na první pohled exotické, mají mnoho praktických využití v různých oblastech, jako jsou manipulace s příznaky (flags), šifrování, optimalizace kódu a mnoho dalších.</p>
+<p>Bitové operátory představují důležitý nástroj v jazyce Ruby pro manipulaci s binárními hodnotami na úrovni jednotlivých bitů. Ačkoli mohou na první pohled působit exoticky a méně obvykle, mají široké spektrum praktických využití v různých oblastech softwarového inženýrství.</p>
+<p>Jedním z hlavních využití je manipulace s příznaky (flags), což jsou jednotlivé bity v paměti, které představují určité stavy nebo nastavení v programu. Díky bitovým operátorům je možné efektivně nastavovat, resetovat a testovat tyto příznaky. Dalším využitím je oblast šifrování, kde se bitové operátory často používají pro provádění šifrovacích a dešifrovacích operací na úrovni jednotlivých bitů. Kromě toho mohou být bitové operátory využity i pro optimalizaci kódu, kde umožňují provádět efektivní a kompaktní manipulace s daty na binární úrovni.</p>
+<p>Celkově lze říci, že bitové operátory jsou mocným nástrojem, který přispívá k flexibilitě a výkonnosti aplikací napsaných v jazyce Ruby a umožňuje programátorům provádět sofistikované operace s binárními daty.</p>
 <ul>
 <li><strong>&amp;</strong> (bitový and)</li>
 <li><strong>|</strong> (bitový or)</li>
@@ -115,14 +122,15 @@ puts <span class="hljs-string">"%s %s"</span> % [str1, str2]  <span class="hljs-
 b = <span class="hljs-number">3</span>  <span class="hljs-comment"># Binárně: 011</span>
 
 puts a &amp; b   <span class="hljs-comment"># Výsledek: 1 (binárně: 001)</span>
-puts a <span class="hljs-params">| b   # Výsledek: 7 (binárně: 111)
-puts a ^ b   # Výsledek: 6 (binárně: 110)
-puts ~a      # Výsledek: -6 (binárně: 111...1010)
-puts a &lt;&lt; 1  # Výsledek: 10 (binárně: 1010)
-puts b &gt;&gt; 1  # Výsledek: 1 (binárně: 01)
-</span></div></code></pre>
+puts a | b   <span class="hljs-comment"># Výsledek: 7 (binárně: 111)</span>
+puts a ^ b   <span class="hljs-comment"># Výsledek: 6 (binárně: 110)</span>
+puts ~a      <span class="hljs-comment"># Výsledek: -6 (binárně: 111...1010)</span>
+puts a &lt;&lt; 1  <span class="hljs-comment"># Výsledek: 10 (binárně: 1010)</span>
+puts b &gt;&gt; 1  <span class="hljs-comment"># Výsledek: 1 (binárně: 01)</span>
+</div></code></pre>
 <h2 id="623-oper%C3%A1tor-t%C5%99%C3%ADcestn%C3%A9ho-podm%C3%ADn%C4%9Bn%C3%AD">6.2.3 Operátor třícestného podmínění</h2>
-<p>Používá se k vytvoření jednoduchých podmíněných výrazů. Tento operátor umožňuje zapsat podmíněný výraz v jednom řádku, což může vést k čistějšímu a méně zdlouhavému kódu.</p>
+<p>Tento speciální operátor je často používán v programování pro vytvoření jednoduchých podmíněných výrazů. Jeho využití umožňuje programátorům zapsat podmíněný výraz do jednoho řádku kódu, což může vést k výrazně čistějšímu a méně zdlouhavému kódu.</p>
+<p>Tím, že podmíněný výraz zahrnuje logický test a dvě možné hodnoty, které se mají vrátit podle toho, zda je test vyhodnocen jako pravdivý či nepravdivý, je možné vyhnout se zbytečnému použití rozsáhlých podmíněných bloků. To vede k elegantnějšímu a snadněji čitelnému kódu, což je důležité pro udržitelnost a správnou údržbu programu v dlouhodobém horizontu.</p>
 <ul>
 <li><strong>? :</strong> (ternární operátor)</li>
 </ul>
@@ -139,7 +147,9 @@ puts <span class="hljs-number">10</span> &lt;=&gt; <span class="hljs-number">10<
 puts <span class="hljs-number">10</span> &lt;=&gt; <span class="hljs-number">5</span>   <span class="hljs-comment"># Výsledek: 1</span>
 </div></code></pre>
 <h2 id="625-oper%C3%A1tor-vytv%C3%A1%C5%99en%C3%AD-rozsahu">6.2.5 Operátor vytváření rozsahu</h2>
-<p>Je využíván k definici sekvencí hodnot. Tento operátor umožňuje vytvoření rozsahu hodnot mezi dvěma určenými body.</p>
+<p>Operátor rozsahu je často využíván v programování k definici sekvencí hodnot mezi dvěma určenými body. Jeho použití umožňuje programátorům jednoduše vytvořit a reprezentovat rozsah hodnot, které mají být zahrnuty v určité sekvenci.</p>
+<p>Tento operátor je obvykle značen dvěma tečkami <em>(..)</em> nebo třemi tečkami <em>(...)</em>, které označují počáteční a koncovou hodnotu rozsahu. Pokud jsou tyto dvě hodnoty celočíselné, vytváří operátor rozsahu sekvenci všech celých čísel mezi nimi. V případě, že jsou hodnoty znaky nebo jiné datové typy, operátor rozsahu vytváří sekvenci těchto hodnot podle abecedního pořadí nebo specifikovaného porovnávacího kritéria.</p>
+<p>Použití tohoto operátoru je užitečné zejména při definování iterací, procházení kolekcí a generování sekvencí hodnot v programování, což přispívá k čitelnosti, efektivitě a údržbě kódu.</p>
 <ul>
 <li><strong>..</strong> (dvojitá tečka): <em>Vytváří rozsah, který zahrnuje počáteční a koncovou hodnotu.</em></li>
 <li><strong>...</strong> (trojitá tečka): <em>Vytváří rozsah, který zahrnuje počáteční hodnotu, ale nezahrnuje koncovou hodnotu.</em></li>
