@@ -56,3 +56,16 @@ img {
     margin-right: auto;
     margin-left: auto;
 }
+
+elm-title a:link { 
+    text-decoration: none; 
+} 
+elm-title a:visited { 
+    text-decoration: none; 
+} 
+elm-title a:hover { 
+    text-decoration: none; 
+} 
+elm-title a:active {
+    text-decoration: none; 
+}
